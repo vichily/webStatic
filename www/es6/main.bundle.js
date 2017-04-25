@@ -42,12 +42,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _module = __webpack_require__(1);
+
+	console.log(_module.aaa);
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 	'use strict';
 
-	var aaa = '999';
-	console.log(aaa);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var aaa = exports.aaa = '99888';
 
 /***/ })
 /******/ ]);

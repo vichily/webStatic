@@ -1,2 +1,3 @@
-let aaa = '999';
+import {aaa} from './module1.js'
+
 console.log(aaa)
