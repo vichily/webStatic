@@ -3,6 +3,16 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create();
 
+var gulpWebpack = require('gulp-webpack'),
+    webpackConfig = require('./webpack.config.js');
+
+//webpack
+gulp.task('easy_webpack', function() {
+    gulp.src('./es6/index.js')
+        .pipe(gulpWebpack(webpackConfig))
+        .pipe(gulp.dest('./www/es6/'))
+});
+
 //启动服务
 gulp.task('connect', function() {
     connect.server({
@@ -39,12 +49,12 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
+//监听
 gulp.task('watch', function() {
-
     gulp.watch('./www/**/*.scss', ['testSass']);
     gulp.watch('./www/**/*.js', ['js']);
     gulp.watch('./www/**/*.html', ['html']);
+    gulp.watch('./www/es6/**/*.js',['easy_webpack']);
     gulp.watch("./www/css/*.css").on('change', browserSync.reload);
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
@@ -56,8 +66,8 @@ gulp.task('testSass', function() {
         .pipe(gulp.dest('./www/css'));
 });
 
-gulp.task('default', ['testSass', 'browser-sync']);
-gulp.task('serve', ['watch', 'browser-sync', 'testSass']);
+gulp.task('default', ['easy_webpack', 'testSass', 'browser-sync']);
+gulp.task('serve', ['easy_webpack', 'watch', 'browser-sync', 'testSass']);
 
 
 //gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数
