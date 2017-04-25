@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(./../css/normalize.css);
 body,
 div,
 dl,
@@ -88,24 +89,84 @@ html {
   overflow-y: scroll; }
 
 /* css common */
-.clear:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-
-.clear {
-  *zoom: 1; }
-
 .app {
+  max-width: 750px;
   background: #f2f2f2;
-  padding: 12px; }
+  padding: 12px;
+  margin: 50px auto; }
   .app .block {
     background: #fff;
     padding: 12px;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
     font-size: 12px;
-    line-height: 20px; }
+    line-height: 20px;
+    margin-bottom: 12px; }
+    .app .block:last-child {
+      margin-bottom: 2px; }
+    .app .block .text {
+      padding: 0 0 10px 0; }
     .app .block img {
-      width: 100%; }
+      width: 100%;
+      display: block; }
+
+.bottomBar {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 999;
+  text-align: center;
+  font-size: 0; }
+  .bottomBar ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 4px 10px 0;
+    width: 25%;
+    height: 50px; }
+    .bottomBar ul li a {
+      font-size: 12px;
+      display: block; }
+      .bottomBar ul li a:link {
+        text-decoration: none; }
+      .bottomBar ul li a .icon {
+        display: inline-block;
+        height: 22px;
+        font-size: 22px;
+        overflow: hidden;
+        padding-bottom: 3px;
+        text-align: center; }
+    .bottomBar ul li a.active {
+      color: #5dd2b8; }
+
+.topBar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #5dd2b8;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+  text-align: center;
+  font-size: 18px;
+  color: #fff; }
+  .topBar .but {
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px; }
+    .topBar .but i {
+      display: block;
+      line-height: 50px;
+      height: 50px; }
+  .topBar .rightBut {
+    right: 12px;
+    font-size: 24px; }
+  .topBar .leftBut {
+    left: 12px;
+    font-size: 40px; }

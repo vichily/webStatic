@@ -88,12 +88,3 @@ html {
   overflow-y: scroll; }
 
 /* css common */
-.clear:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-
-.clear {
-  *zoom: 1; }
