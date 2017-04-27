@@ -1,0 +1,15 @@
+@import "base";
+@mixin imgbox {
+  width: 100%;
+  display: block;
+}
+
+@mixin clear {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}

@@ -48,7 +48,9 @@
 
 	var _module = __webpack_require__(1);
 
-	console.log(_module.aaa);
+	var bbb = _module.aaa.toString();
+
+	console.log(bbb);
 
 /***/ }),
 /* 1 */
@@ -57,9 +59,30 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-	var aaa = exports.aaa = '99888';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var aaa = exports.aaa = function () {
+	    function aaa(x, y) {
+	        _classCallCheck(this, aaa);
+
+	        this.x = x;
+	        this.y = y;
+	    }
+
+	    _createClass(aaa, [{
+	        key: 'toString',
+	        value: function toString() {
+	            return '(' + this.x + ',' + this.y + ')';
+	        }
+	    }]);
+
+	    return aaa;
+	}();
 
 /***/ })
 /******/ ]);

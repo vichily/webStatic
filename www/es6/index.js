@@ -1,3 +1,5 @@
 import {aaa} from './module1.js'
 
-console.log(aaa)
+let bbb = aaa.toString()
+
+console.log(bbb)

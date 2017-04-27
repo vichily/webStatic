@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./wangEditor-2.1.23/dist/js/lib/jquery-2.2.1.js"></script>
+</head>
+
+<body>
+
+
+    <div class='upload'>
+        <input type="file" name="file" class="image" />
+        <input type="button" name="upbutton" class="upbutton" value="上传" />
+    </div>
+    <div class='previews'>
+        <img src="#" class="image_thumb" alt="图片预览" />
+    </div>
+
+    <script type="text/javascript">
+        $(".upbutton").click(function() {
+            //定义允许上传的图片格式 在前台就可以直接判断，不合法的格式将不会上传
+            var filetype = ['jpg', 'jpeg', 'png', 'gif'];
+            if ($('.image').get(0).files) {
+                fi = $('.image').get(0).files[0]; //得到文件信息
+                //判断文件格式是否是图片 如果不是图片则返回false
+                var fname = fi.name.split('.');
+                if (filetype.indexOf(fname[1].toLowerCase()) == -1) {
+                    alert('文件格式不支持');
+                    return;
+                }
+                //实例化h5的fileReader
+                var fr = new FileReader();
+                fr.readAsDataURL(fi); //以base64编码格式读取图片文件
+                fr.onload = function(frev) {
+                    pic = frev.target.result; //得到结果数据
+                    //开始上传之前，预览图片
+                    $('.image_thumb').attr('src', pic);
+                    //使用ajax 利用post方式提交数据
+                    $.post(
+                        'upImg.php', {
+                            message: pic,
+                            filename: fname[0],
+                            filetype: fname[1],
+                            filesize: fi.size
+                        },
+                        function(data) {
+                            console.log(data)
+                        }
+                    );
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
