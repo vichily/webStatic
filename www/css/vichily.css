@@ -1,90 +1,55 @@
-@charset "UTF-8";
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0; }
+nav {
+  position: fixed;
+  top: -70px;
+  height: 70px;
+  overflow: hidden;
+  right: 0px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff; }
+  nav i {
+    position: fixed;
+    right: 20px;
+    top: 0px;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    display: inline-block;
+    cursor: pointer; }
+  nav ul {
+    padding: 0px; }
+    nav ul li {
+      float: left;
+      list-style: none; }
+      nav ul li a {
+        display: inline-block;
+        padding: 20px 30px;
+        color: #fff; }
+        nav ul li a:hover {
+          color: #ff0f65;
+          text-decoration: none; }
 
-body {
-  background: #fff;
-  color: #555;
-  font-size: 14px;
-  font-family: '微软雅黑', Verdana, Arial, Helvetica, sans-serif; }
-
-td,
-th,
-caption {
-  font-size: 14px; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-  font-size: 100%; }
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
-  font-weight: normal; }
-
-a {
-  color: #555;
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-img {
-  border: none; }
-
-ol,
-ul,
-li {
-  list-style: none; }
-
-input,
-textarea,
-select,
-button {
-  font: 14px Verdana, Helvetica, Arial, sans-serif; }
-
-table {
-  border-collapse: collapse; }
-
-html {
-  overflow-y: scroll; }
-
-/* css common */
+header {
+  background: url(../img/vichily/home.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
+  header .overlay {
+    padding-top: 150px;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 790px;
+    color: #fff; }
+    header .overlay .main-img {
+      border: 5px solid #ff0f65;
+      max-height: 200px;
+      cursor: pointer; }
+    header .overlay h1 {
+      font-weight: 900;
+      padding: 20px 0px 0px 0px;
+      color: #ff0f65; }
+    header .overlay h2 {
+      font-weight: 400;
+      padding: 0px 0px 30px 0px;
+      color: #fff; }
+    header .overlay .custom-btn-one {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-color: #ff0f65; }

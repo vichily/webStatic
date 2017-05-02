@@ -1,0 +1,23 @@
+#tiles {
+  position: relative;
+  li{
+    width: 280px;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: none;
+    cursor: pointer;
+    border-radius: 0.2em;
+    img{
+      display: block;
+      width: 100%;
+      border-top-left-radius: 0.2em;
+      border-top-right-radius: 0.2em;
+    }
+    .post-info{
+      padding: 20px;
+    }
+  }
+}

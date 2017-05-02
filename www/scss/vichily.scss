@@ -1,15 +1,74 @@
-@import "base";
+$mainColor :rgb(255, 15, 101);
 @mixin imgbox {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
-@mixin clear {
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
+nav {
+    position: fixed;
+    top: -70px;
+    height: 70px;
+    overflow: hidden;
+    right: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    i {
+        position: fixed;
+        right: 20px;
+        top: 0px;
+        font-size: 18px !important;
+        line-height: 60px !important;
+        display: inline-block;
+        cursor: pointer;
+
+    }
+    ul {
+        padding: 0px;
+        li {
+            float: left;
+            list-style: none;
+            a {
+                display: inline-block;
+                padding: 20px 30px;
+                color: #fff;
+                &:hover{
+                    color: $mainColor;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+header {
+    background: url(../img/vichily/home.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .overlay {
+        padding-top: 150px;
+        background: rgba(0, 0, 0, 0.6);
+        min-height: 790px;
+        color: #fff;
+        .main-img {
+            border: 5px solid $mainColor;
+            max-height: 200px;
+            cursor: pointer;
+        }
+        h1 {
+            font-weight: 900;
+            padding: 20px 0px 0px 0px;
+            color: $mainColor;
+        }
+        h2 {
+            font-weight: 400;
+            padding: 0px 0px 30px 0px;
+            color: #fff;
+        }
+        .custom-btn-one {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.70);
+            border-color: $mainColor;
+        }
+    }
 }
