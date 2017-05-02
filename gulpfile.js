@@ -52,11 +52,10 @@ gulp.task('browser-sync', function() {
 //监听
 gulp.task('watch', function() {
     gulp.watch('./www/**/*.scss', ['testSass']);
-    gulp.watch('./www/**/*.js', ['js']);
-    gulp.watch('./www/**/*.html', ['html']);
-    gulp.watch('./www/es6/**/*.js',['easy_webpack']);
-    gulp.watch("./www/css/*.css").on('change', browserSync.reload);
-    gulp.watch("./**/*.html").on('change', browserSync.reload);
+    // gulp.watch('./www/**/*.js', ['js']);
+   // gulp.watch('./www/**/*.html', ['html']);
+    // gulp.watch('./www/es6/**/*.js', ['easy_webpack']);
+    // gulp.watch("./www/css/*.css").on('change', browserSync.reload);
 });
 
 //编译sass
@@ -66,8 +65,8 @@ gulp.task('testSass', function() {
         .pipe(gulp.dest('./www/css'));
 });
 
-gulp.task('default', ['easy_webpack', 'testSass', 'browser-sync']);
-gulp.task('serve', ['easy_webpack', 'watch', 'browser-sync', 'testSass']);
+gulp.task('default', ['testSass', 'browser-sync']);
+gulp.task('serve', [ 'watch', 'testSass']);
 
 
 //gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数
