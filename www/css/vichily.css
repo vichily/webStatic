@@ -14,7 +14,9 @@ nav {
     font-size: 18px !important;
     line-height: 60px !important;
     display: inline-block;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 999999999999999999;
+    color: #fff; }
   nav ul {
     padding: 0px; }
     nav ul li {

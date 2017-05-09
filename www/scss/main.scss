@@ -12,7 +12,6 @@ $boxShadow5: 0px 2px 3px rgba(0, 0, 0, 0.5);
     width: 100%;
     display: block;
 }
-
 @mixin clear {
     &:after {
         content: ".";
@@ -22,7 +21,6 @@ $boxShadow5: 0px 2px 3px rgba(0, 0, 0, 0.5);
         visibility: hidden;
     }
 }
-
 // 主体内容
 .app {
     max-width: 750px;
@@ -47,7 +45,6 @@ $boxShadow5: 0px 2px 3px rgba(0, 0, 0, 0.5);
         }
     }
 }
-
 // 底部bar
 .bottomBar {
     position: fixed;
@@ -88,7 +85,6 @@ $boxShadow5: 0px 2px 3px rgba(0, 0, 0, 0.5);
         }
     }
 }
-
 //顶部bar
 .topBar {
     position: fixed;

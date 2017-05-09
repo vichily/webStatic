@@ -21,7 +21,8 @@ nav {
         line-height: 60px !important;
         display: inline-block;
         cursor: pointer;
-
+        z-index: 999999999999999999;
+        color: #fff;
     }
     ul {
         padding: 0px;

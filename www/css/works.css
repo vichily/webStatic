@@ -9,11 +9,25 @@
     -webkit-border-radius: 2px;
     display: none;
     cursor: pointer;
-    border-radius: 0.2em; }
+    border-radius: 0.2em;
+    padding: 10px;
+    box-sizing: border-box; }
     #tiles li img {
       display: block;
       width: 100%;
       border-top-left-radius: 0.2em;
       border-top-right-radius: 0.2em; }
     #tiles li .post-info {
-      padding: 20px; }
+      padding: 10px; }
+
+.content {
+  background: url(../img/vichily/home.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
+  .content .overlay {
+    padding: 100px 60px 0;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 790px; }
+    .content .overlay .wrap {
+      max-width: 1600px;
+      margin: 0 auto; }
